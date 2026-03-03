@@ -1,0 +1,17 @@
+
+target/
+*.jar
+*.war
+*.class
+
+
+.idea/
+logs/
+*.log
+.metadata/
+.classpath
+.project
+.settings/
+bin/
+*.bak
+*.tmp
