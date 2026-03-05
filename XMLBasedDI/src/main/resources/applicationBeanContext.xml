@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<!-- <bean class="com.xmlconfig.beans.Address" id="add1"> <property name="add_id" 
+		value="101"></property> <property name="full_add" value="Dev Nagar Rajeev 
+		Gandhi Colony"> </property> <property name="plotNo" value="34/A"></property> 
+		<property name="pincode" value="342001"></property> <property name="city" 
+		value="Jodhpur"></property> <property name="state" value="Rajasthan"></property> 
+		</bean> <bean class="com.xmlconfig.beans.Student" id="st1"> <property name="st_name" 
+		value="Abdur rahman"></property> <property name="roll_no" value="123"></property> 
+		<property name="email" value="abdurrahman@gmail.com"></property> <property 
+		name="address" ref="add1"></property> </bean> -->
+		
+<!-- Constructor based Dependency Injection -->
+	<bean class="com.xmlconfig.beans.Address" id="add1">
+		<constructor-arg value="101"></constructor-arg>
+		<constructor-arg
+			value="Dev Nagar Rajeev Gandhi Colony"></constructor-arg>
+		<constructor-arg value="105">
+		</constructor-arg>
+		<constructor-arg value="342008"></constructor-arg>
+		<constructor-arg value="Jaipur"></constructor-arg>
+		<constructor-arg value="Rajasthan"> </constructor-arg>
+	</bean>
+	
+	<bean class="com.xmlconfig.beans.Student" id="std1">
+		<constructor-arg value="991"></constructor-arg>
+		<constructor-arg
+			value="Yash"></constructor-arg>
+		<constructor-arg value="yashpratp@gmail.com">
+		</constructor-arg>
+		<constructor-arg ref="add1"></constructor-arg>	
+	</bean>
+</beans>
